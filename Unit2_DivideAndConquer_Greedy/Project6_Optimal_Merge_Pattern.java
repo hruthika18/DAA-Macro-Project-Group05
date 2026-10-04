@@ -58,7 +58,6 @@ public class Project6_Optimal_Merge_Pattern {
 OUTPUT:
 
 Enter number of files: 4
-
 Enter file sizes:
 File 1: 5
 File 2: 10
@@ -68,7 +67,6 @@ File 4: 30
 -----------------------------
 OPTIMAL MERGE PATTERN RESULT
 -----------------------------
-
 Minimum merge cost: 115
 
 */
