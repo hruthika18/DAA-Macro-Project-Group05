@@ -1,32 +1,51 @@
-# Unit 2 - Divide and Conquer and Greedy
+# Project 6 - Optimal Merge Pattern using Greedy Method
 
-## Project 6 - Optimal Merge Pattern
+## Overview
 
-### Aim
+The Optimal Merge Pattern is a greedy algorithm used to merge multiple files into one file with minimum total cost.
 
-To implement the Optimal Merge Pattern using the Greedy Method and find the minimum cost of merging multiple files.
+When two files are merged, the cost of merging them is equal to the sum of their sizes. The main objective is to find the order of merging the files so that the total merging cost is minimum.
 
-### Description
+In this project, the Optimal Merge Pattern is implemented using the Greedy Method and a Priority Queue.
 
-Optimal Merge Pattern is a greedy algorithm used to merge several files into one file with minimum total cost.
+The program does not use fixed input values. The user enters the required information at runtime.
 
-At each step, the two smallest files are selected and merged. The merged file is then added back. This process continues until only one file remains.
+The user can enter:
 
-### Algorithm
+- Number of files
+- Size of each file
 
-1. Read the number of files.
-2. Read the size of each file.
-3. Store all file sizes in a priority queue.
-4. Select the two smallest file sizes.
-5. Add them to calculate the merge cost.
-6. Add the merge cost to the total cost.
-7. Insert the merged file back into the priority queue.
-8. Repeat until only one file remains.
-9. Display the minimum total merge cost.
+The program then calculates the minimum total cost required to merge all the files.
 
-### Example Input
+## Objective
+
+The main objectives of this project are:
+
+1. Understand the Optimal Merge Pattern problem.
+2. Implement the Optimal Merge Pattern using the Greedy Method.
+3. Understand how the greedy approach works.
+4. Use a Priority Queue to select the smallest files.
+5. Calculate the minimum total merge cost.
+6. Display the minimum merge cost.
+
+## Algorithm
+
+The solution uses the Greedy Method with a Priority Queue.
+
+At every step, the two files with the smallest sizes are selected and merged.
+
+The cost of merging the two files is added to the total cost. The newly merged file is then inserted back into the Priority Queue.
+
+This process is repeated until only one file remains.
+
+### 1. Problem Definition
+
+Given `n` files with different sizes, the objective is to merge all the files into one file with minimum total merging cost.
+
+If two files have sizes `a` and `b`, then:
 
 ```text
-Enter number of files: 4
-Enter file sizes:
-5 10 20 30
+Merge Cost = a + b
+
+
+
