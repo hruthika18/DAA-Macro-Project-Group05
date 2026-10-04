@@ -5,17 +5,14 @@ public class Project6_Optimal_Merge_Pattern {
     static int n;
     static PriorityQueue<Integer> files;
 
-    static int optimalMerge() {
-
+static int optimalMerge() {
         int totalCost = 0;
 
-        while (files.size() > 1) {
-
+ while (files.size() > 1) {
             int first = files.remove();
             int second = files.remove();
 
-            int mergeCost = first + second;
-
+     int mergeCost = first + second;
             totalCost = totalCost + mergeCost;
 
             files.add(mergeCost);
@@ -24,16 +21,12 @@ public class Project6_Optimal_Merge_Pattern {
         return totalCost;
     }
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        // Number of files
+ public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of files: ");
         n = sc.nextInt();
 
-        // File sizes
-        files = new PriorityQueue<>();
+     files = new PriorityQueue<>();
 
         System.out.println("Enter file sizes:");
 
@@ -42,14 +35,13 @@ public class Project6_Optimal_Merge_Pattern {
             files.add(sc.nextInt());
         }
 
-        // Solve Optimal Merge Pattern
-        int answer = optimalMerge();
+    int answer = optimalMerge();
 
-        System.out.println("\n-----------------------------");
+        System.out.println();
+        System.out.println("-----------------------------");
         System.out.println("OPTIMAL MERGE PATTERN RESULT");
         System.out.println("-----------------------------");
-
-        System.out.println("Minimum merge cost: " + answer);
+     System.out.println("Minimum merge cost: " + answer);
 
         sc.close();
     }
