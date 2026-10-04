@@ -1,0 +1,1 @@
+Draw the state space tree for subset sum = 15 from {5, 10, 12}.

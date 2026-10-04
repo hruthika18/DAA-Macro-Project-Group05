@@ -1,0 +1,1 @@
+Illustrate bounding and pruning in 0/1 Knapsack using node values.
