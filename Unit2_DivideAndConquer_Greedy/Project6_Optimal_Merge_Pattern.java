@@ -67,6 +67,7 @@ File 4: 30
 -----------------------------
 OPTIMAL MERGE PATTERN RESULT
 -----------------------------
+
 Minimum merge cost: 115
 
 */
