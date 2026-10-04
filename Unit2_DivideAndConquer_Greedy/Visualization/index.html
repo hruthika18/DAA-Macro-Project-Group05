@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optimal Merge Pattern Visualization</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 40px;
+        }
+
+        .file {
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Optimal Merge Pattern</h1>
+
+    <p>Files are merged by selecting the two smallest files.</p>
+
+    <div id="files"></div>
+
+    <button onclick="mergeFiles()">Merge Two Smallest</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        let files = [5, 10, 20, 30];
+        let totalCost = 0;
+
+        function displayFiles() {
+
+            let output = "";
+
+            files.forEach(function(file) {
+                output += `<div class="file">File: ${file}</div>`;
+            });
+
+            document.getElementById("files").innerHTML = output;
+        }
+
+        function mergeFiles() {
+
+            if (files.length <= 1) {
+                document.getElementById("result").innerHTML =
+                    "Minimum Merge Cost = " + totalCost;
+                return;
+            }
+
+            files.sort(function(a, b) {
+                return a - b;
+            });
+
+            let first = files.shift();
+            let second = files.shift();
+
+            let cost = first + second;
+
+            totalCost += cost;
+
+            files.push(cost);
+
+            document.getElementById("result").innerHTML =
+                "Merged " + first + " + " + second +
+                " = " + cost +
+                "<br>Total Cost = " + totalCost;
+
+            displayFiles();
+        }
+
+        displayFiles();
+
+    </script>
+
+</body>
+</html>
