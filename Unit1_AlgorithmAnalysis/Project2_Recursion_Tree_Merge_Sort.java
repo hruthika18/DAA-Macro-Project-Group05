@@ -1,4 +1,3 @@
-```java
 import java.util.Scanner;
 
 public class Project2_MergeSortRecursionTree {
