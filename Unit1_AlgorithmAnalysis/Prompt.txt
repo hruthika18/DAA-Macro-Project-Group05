@@ -1,12 +1,1 @@
-Draw a recursion tree for Merge Sort dividing an array of 8 elements: [38, 27, 43, 3, 9, 82, 10, 19].
-1. Show 4 distinct levels (Level 0 to Level 3):
-   - Level 0: [38, 27, 43, 3, 9, 82, 10, 19]
-   - Level 1: [38, 27, 43, 3] and [9, 82, 10, 19]
-   - Level 2: [38, 27], [43, 3], [9, 82], [10, 19]
-   - Level 3: [38], [27], [43], [3], [9], [82], [10], [19]
-2. Show downward arrows for recursive division (Divide).
-3. Show upward arrows for recombination in sorted order (Merge):
-   - [27, 38], [3, 43], [9, 82], [10, 19]
-   - [3, 27, 38, 43], [9, 10, 19, 82]
-   - [3, 9, 10, 19, 27, 38, 43, 82]
-4. Indicate O(N) work per level resulting in O(N log N) total time complexity.
+Draw a recursion tree for Merge Sort dividing an array of 8 elements.
