@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Project 2 - Merge Sort Recursion Tree
+# Project 2 : Merge Sort Recursion Tree
 
 ## Overview
 
@@ -502,5 +501,3 @@ Algorithm MergeSort(arr, left, right):
 &#x20;       MergeSort(arr, mid + 1, right)
 
 &#x20;       Merge(arr, left, mid, right)
-
->>>>>>> 92f5d3b7052d670ef7423baddd4f2723409cb994
