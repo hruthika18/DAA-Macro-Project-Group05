@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Project 13 - 0/1 Knapsack Problem Using Branch and Bound
 
 ## Overview
@@ -688,4 +687,3 @@ After completing this project, we understand:
 This project implements the 0/1 Knapsack Problem using Branch and Bound in Java. The algorithm explores promising item selections and prunes branches that cannot improve the current best solution.
 
 For the given example, the algorithm selects Items 2 and 3, achieving a maximum profit of `115` without exceeding the knapsack capacity of `7`.
->>>>>>> 92f5d3b7052d670ef7423baddd4f2723409cb994
