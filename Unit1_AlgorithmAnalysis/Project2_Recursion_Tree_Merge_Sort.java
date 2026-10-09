@@ -1,4 +1,3 @@
-```java
 import java.util.Scanner;
 
 public class Project2_MergeSortRecursionTree {
@@ -23,7 +22,7 @@ public class Project2_MergeSortRecursionTree {
             return;
         }
 
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
 
         mergeSort(arr, left, mid, level + 1);
         mergeSort(arr, mid + 1, right, level + 1);
@@ -76,6 +75,12 @@ public class Project2_MergeSortRecursionTree {
         System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
 
+        if (n <= 0) {
+            System.out.println("Number of elements must be positive.");
+            sc.close();
+            return;
+        }
+
         int[] arr = new int[n];
 
         System.out.println("Enter array elements:");
@@ -90,20 +95,18 @@ public class Project2_MergeSortRecursionTree {
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
 
         sc.close();
     }
 }
 
-
 /*
-
-INPUT:
-Enter number of elements: 8
-Enter array elements:
+Sample Input:
+8
 8 3 6 2 7 1 5 4
 
-OUTPUT:
+Sample Output:
 Merge Sort Recursion Tree:
 mergeSort(0, 7) -> 8 3 6 2 7 1 5 4
     mergeSort(0, 3) -> 8 3 6 2
@@ -129,5 +132,4 @@ mergeSort(0, 7) -> 8 3 6 2 7 1 5 4
 Merged: 1 2 3 4 5 6 7 8
 
 Sorted array: 1 2 3 4 5 6 7 8
-
 */
