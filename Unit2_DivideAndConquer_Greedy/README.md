@@ -1,4 +1,4 @@
-# Project 6 - Optimal Merge Pattern using Greedy Method
+# Project 6 : Optimal Merge Pattern using Greedy Method
 
 ## Overview
 
