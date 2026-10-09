@@ -4,7 +4,7 @@
 
 Merge Sort is a sorting algorithm based on the divide-and-conquer technique. It divides an array into smaller subarrays until each subarray contains only one element. These subarrays are then merged in sorted order until the entire array becomes sorted.
 
-In this project, the Merge Sort algorithm is implemented in Java. The program displays the recursive calls, shows the merging process, and prints the final sorted array. The recursion tree helps us understand how the original problem is divided into smaller subproblems.
+In this project, Merge Sort is implemented in Java. The program displays the recursive calls, shows the merging process, and prints the final sorted array. The recursion tree helps us understand how the original problem is divided into smaller subproblems.
 
 The user enters the array elements at runtime, and the program performs the sorting process.
 
@@ -14,9 +14,9 @@ The main objectives of this project are:
 
 1. Understand the Merge Sort algorithm.
 2. Understand the divide-and-conquer technique.
-3. Visualize the recursive calls made by Merge Sort.
-4. Understand how an array is divided into smaller subarrays.
-5. Observe how sorted subarrays are merged.
+3. Understand how recursive calls form a recursion tree.
+4. Observe how an array is divided into smaller subarrays.
+5. Understand how sorted subarrays are merged.
 6. Analyze the time and space complexity of Merge Sort.
 
 ## Algorithm
@@ -47,9 +47,9 @@ Sorting a large array can be easier when the problem is divided into smaller sub
 
 Merge Sort follows three main steps:
 
-* **Divide:** Split the array into two halves.
-* **Conquer:** Recursively sort each half.
-* **Combine:** Merge the sorted halves into one sorted array.
+- **Divide:** Split the array into two halves.
+- **Conquer:** Recursively sort each half.
+- **Combine:** Merge the sorted halves into one sorted array.
 
 The process continues until each subarray contains only one element. A single-element array is already sorted, so it becomes the base case of the recursion.
 
@@ -77,10 +77,10 @@ The recursion tree for dividing the array is:
 
 At the top, the original array contains eight elements.
 
-* **Level 0:** The original array contains 8 elements.
-* **Level 1:** The array is divided into two subarrays of 4 elements each.
-* **Level 2:** Each subarray is divided into two subarrays of 2 elements each.
-* **Level 3:** Each subarray is divided into single-element arrays.
+- **Level 0:** The original array contains 8 elements.
+- **Level 1:** The array is divided into two subarrays of 4 elements each.
+- **Level 2:** Each subarray is divided into two subarrays of 2 elements each.
+- **Level 3:** Each subarray is divided into single-element arrays.
 
 At the last level, all subarrays contain one element. These are the base cases, and no further division is required.
 
@@ -109,7 +109,6 @@ Initially, the individual elements are:
 
 ```text
 [3, 8] + [2, 6] -> [2, 3, 6, 8]
-
 [1, 7] + [4, 5] -> [1, 4, 5, 7]
 ```
 
@@ -174,7 +173,7 @@ MERGE_SORT(arr, left, right):
     if left >= right:
         return
 
-    mid = (left + right) / 2
+    mid = left + (right - left) / 2
 
     MERGE_SORT(arr, left, mid)
 
@@ -323,7 +322,6 @@ Each subarray contains one element and is already sorted.
 
 ```text
 [3, 8] + [2, 6] -> [2, 3, 6, 8]
-
 [1, 7] + [4, 5] -> [1, 4, 5, 7]
 ```
 
@@ -369,12 +367,12 @@ The temporary array requires `O(n)` space, so the overall auxiliary space comple
 
 ## Technologies Used
 
-* Programming Language: Java
-* Algorithm: Merge Sort
-* Technique: Divide and Conquer
-* Concept: Recursion
-* Input: Runtime input using `Scanner`
-* Development Environment: Visual Studio Code
+- Programming Language: Java
+- Algorithm: Merge Sort
+- Technique: Divide and Conquer
+- Concept: Recursion
+- Input: Runtime input using `Scanner`
+- Development Environment: Visual Studio Code
 
 The program can also be compiled and executed using other Java IDEs such as IntelliJ IDEA or Eclipse.
 
@@ -383,78 +381,34 @@ The program can also be compiled and executed using other Java IDEs such as Inte
 ```text
 Unit1_AlgorithmAnalysis/
 |
-|-- Project2_MergeSortRecursionTree.java
+|-- Project2_Recursion_Tree_Merge_Sort.java
 |-- README.md
 |-- Pseudocode.txt
-|-- Prompt.txt
-`-- Visualization.png
+`-- Prompt.txt
 ```
 
 ### File Description
 
-| File                                   | Description                                                            |
-| -------------------------------------- | ---------------------------------------------------------------------- |
-| `Project2_MergeSortRecursionTree.java` | Java implementation of Merge Sort with recursive-call and merge output |
-| `README.md`                            | Project documentation                                                  |
-| `Pseudocode.txt`                       | Algorithm and pseudocode                                               |
-| `Prompt.txt`                           | Prompt used to generate the recursion-tree visualization               |
-| `Visualization.png`                    | Diagram of the Merge Sort recursion tree                               |
-
-## Visualization
-
-![Merge Sort Recursion Tree](Visualization.png)
-
-The `Visualization.png` file represents the division and merging stages of Merge Sort for an array of eight elements.
-
-The visualization should include:
-
-* The original array at the root.
-* Recursive division into two halves at each level.
-* Single-element subarrays at the leaf level.
-* Arrows connecting parent arrays to their left and right subarrays.
-* The merging process in bottom-up order.
-* The final sorted array.
-* The time and space complexity.
-
-The main flow of the algorithm is:
-
-```text
-Start with the original array
-          |
-          v
-Divide the array into two halves
-          |
-          v
-Recursively divide each half
-          |
-          v
-Reach single-element subarrays
-          |
-          v
-Merge adjacent sorted subarrays
-          |
-          v
-Merge larger sorted subarrays
-          |
-          v
-Obtain the final sorted array
-```
-
-The recursion tree explains the division of the problem, while the merging stages show how the solution is constructed.
+| File | Description |
+|------|-------------|
+| `Project2_Recursion_Tree_Merge_Sort.java` | Java implementation of Merge Sort with recursive-call and merge output |
+| `README.md` | Project documentation |
+| `Pseudocode.txt` | Algorithm and pseudocode |
+| `Prompt.txt` | Prompt prepared for the project |
 
 ## Learning Outcome
 
 After completing this project, we understand:
 
-* How Merge Sort works.
-* How the divide-and-conquer technique is applied.
-* How recursive calls form a recursion tree.
-* How an array is divided into smaller subarrays.
-* Why a single-element array is the base case.
-* How two sorted subarrays are merged.
-* How to trace recursive calls in a Java program.
-* How the recursion tree relates to the time complexity.
-* Why Merge Sort requires additional memory for merging.
+- How Merge Sort works.
+- How the divide-and-conquer technique is applied.
+- How recursive calls form a recursion tree.
+- How an array is divided into smaller subarrays.
+- Why a single-element array is the base case.
+- How two sorted subarrays are merged.
+- How to trace recursive calls in a Java program.
+- How the recursion tree relates to the time complexity.
+- Why Merge Sort requires additional memory for merging.
 
 ## Conclusion
 
