@@ -1,4 +1,4 @@
-# Project 7 - Travelling Salesperson Problem using Dynamic Programming
+# Project 7 : Travelling Salesperson Problem using Dynamic Programming
 
 ## Overview
 
